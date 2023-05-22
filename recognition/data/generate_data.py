@@ -5,9 +5,7 @@ import os
 import numpy as np
 import tensorflow as tf
 
-from recognition.predict import get_embeddings
-
-tf.enable_eager_execution()
+from predict import get_embeddings
 
 
 class GenerateData:

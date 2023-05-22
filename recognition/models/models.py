@@ -2,7 +2,6 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import tensorflow as tf
 
-tf.enable_eager_execution()
 
 
 class NormDense(tf.keras.layers.Layer):

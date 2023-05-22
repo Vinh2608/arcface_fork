@@ -7,10 +7,8 @@ import sys
 import tensorflow as tf
 import yaml
 
-from recognition.backbones.resnet_v1 import ResNet_v1_50
-from recognition.models.models import MyModel
-
-tf.enable_eager_execution()
+from backbones.resnet_v1 import ResNet_v1_50
+from models.models import MyModel
 
 
 def get_embeddings(model, images):

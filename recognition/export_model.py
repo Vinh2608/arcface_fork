@@ -7,11 +7,9 @@ import sys
 import tensorflow as tf
 import yaml
 
-from recognition.backbones.resnet_v1 import ResNet_v1_50
-from recognition.data.generate_data import GenerateData
-from recognition.models.models import MyModel
-
-tf.enable_eager_execution()
+from backbones.resnet_v1 import ResNet_v1_50
+from data.generate_data import GenerateData
+from models.models import MyModel
 
 
 def parse_args(argv):
@@ -27,6 +25,7 @@ args = parse_args(sys.argv[1:])
 
 with open(args.config_path) as cfg:
     config = yaml.load(cfg, Loader=yaml.FullLoader)
+
 gd = GenerateData(config)
 train_data, _ = gd.get_train_data()
 model = MyModel(ResNet_v1_50, embedding_size=config['embedding_size'])

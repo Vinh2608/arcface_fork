@@ -10,20 +10,18 @@ import time
 import tensorflow as tf
 import yaml
 
-from recognition.backbones.resnet_v1 import ResNet_v1_50
-from recognition.data.generate_data import GenerateData
-from recognition.losses.loss import arcface_loss, triplet_loss, center_loss
-from recognition.models.models import MyModel
-from recognition.predict import get_embeddings
-from recognition.valid import Valid_Data
+from backbones.resnet_v1 import ResNet_v1_50
+from data.generate_data import GenerateData
+from losses.loss import arcface_loss, triplet_loss, center_loss
+from models.models import MyModel
+from predict import get_embeddings
+from valid import Valid_Data
 
 # os.environ['CUDA_VISIBLE_DEVICES'] = "2,3"
 # config = tf.ConfigProto()
 # config.gpu_options.allow_growth = True
 # config.gpu_options.per_process_gpu_memory_fraction = 0.4
 # tf.enable_eager_execution(config=config)
-
-tf.enable_eager_execution()
 
 
 # log_cfg_path = '../logging.yaml'
@@ -215,7 +213,7 @@ def main():
     args = parse_args(sys.argv[1:])
     # logger.info(args)
 
-    with open(args.config_path) as cfg:
+    with open('configs/config.yaml') as cfg:
         config = yaml.load(cfg, Loader=yaml.FullLoader)
 
     t = Trainer(config)

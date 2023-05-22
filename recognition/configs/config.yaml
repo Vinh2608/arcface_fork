@@ -4,8 +4,6 @@ backbone:
 image_size: 112
 embedding_size: 512
 
-
-
 # hyper params
 optimizer: 'ADAM'    # ADADELTA, ADAGRAD, ADAM, ADAMAX, FTRL, NADAM, RMSPROP, SGD
 learning_rate: 0.01
@@ -32,8 +30,8 @@ thresh: 0.2
 below_fpr: 0.001        # fpr should below this
 # paths
 
-train_dir: '~/data/insightface/recognition/train'
-valid_dir: '~/data/insightface/recognition/val'
+train_dir: 'E:\InsightFaceFeiWang\insightface\recognition\data\facebank\train'
+valid_dir: 'E:\InsightFaceFeiWang\insightface\recognition\data\facebank\val'
 test_dir:
-ckpt_dir: '~/models/insightface/recognition'
-summary_dir: '~/logs/insightface/recognition/summary'
+ckpt_dir: 'E:\InsightFaceFeiWang\insightface\recognition'
+summary_dir: 'E:\InsightFaceFeiWang\insightface\recognition\summary'

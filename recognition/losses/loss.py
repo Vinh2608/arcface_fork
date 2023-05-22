@@ -4,8 +4,6 @@ import math
 
 import tensorflow as tf
 
-tf.enable_eager_execution()
-
 
 def softmax_loss(dense, labels):
     cce = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)  # do softmax
