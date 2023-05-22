@@ -35,3 +35,9 @@ valid_dir: 'E:\InsightFaceFeiWang\insightface\recognition\data\facebank\val'
 test_dir:
 ckpt_dir: 'E:\InsightFaceFeiWang\insightface\recognition'
 summary_dir: 'E:\InsightFaceFeiWang\insightface\recognition\summary'
+
+#train_dir: '/content/arcface_fork/recognition/data/facebank/train'
+#valid_dir: '/content/arcface_fork/recognition/data/facebank/val'
+#test_dir:
+#ckpt_dir: '/content/arcface_fork/recognition'
+#summary_dir: '/content/arcface_fork/recognition/summary'
