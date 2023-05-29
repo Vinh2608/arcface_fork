@@ -161,7 +161,6 @@ class Trainer:
                         loss = self._train_triplet_step(anchor, pos, neg)
                         with self.train_summary_writer.as_default():
                             tf.compat.v2.summary.scalar('loss', loss, step=step)
-                        print('epoch: {}, step: {}, loss = {}'.format(epoch, step, loss))
             elif self.loss_type == 'logit':
                 # logit loss
                 for step, (input_image, target) in enumerate(self.train_data):
@@ -170,9 +169,7 @@ class Trainer:
                         tf.compat.v2.summary.scalar('loss', loss, step=step)
                         tf.compat.v2.summary.scalar('logit_loss', logit_loss, step=step)
                         tf.compat.v2.summary.scalar('center_loss', ct_loss, step=step)
-                    print('epoch: {}, step: {}, loss = {}, logit_loss = {}, center_loss = {}'.format(epoch, step, loss,
-                                                                                                     logit_loss,
-                                                                                                     ct_loss))
+
             else:
                 raise ValueError('Invalid loss type')
 
