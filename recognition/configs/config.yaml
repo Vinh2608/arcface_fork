@@ -30,14 +30,14 @@ thresh: 0.2
 below_fpr: 0.001        # fpr should below this
 # paths
 
-train_dir: 'E:\InsightFaceFeiWang\insightface\recognition\data\facebank\train'
-valid_dir: 'E:\InsightFaceFeiWang\insightface\recognition\data\facebank\val'
-test_dir:
-ckpt_dir: 'E:\InsightFaceFeiWang\insightface\recognition'
-summary_dir: 'E:\InsightFaceFeiWang\insightface\recognition\summary'
-
-#train_dir: '/content/arcface_fork/recognition/data/VN-celeb/train'
-#valid_dir: '/content/arcface_fork/recognition/data/VN-celeb/val'
+#train_dir: 'E:\InsightFaceFeiWang\insightface\recognition\data\facebank\train'
+#valid_dir: 'E:\InsightFaceFeiWang\insightface\recognition\data\facebank\val'
 #test_dir:
-#ckpt_dir: '/content/arcface_fork/recognition'
-#summary_dir: '/content/arcface_fork/recognition/summary'
+#ckpt_dir: 'E:\InsightFaceFeiWang\insightface\recognition'
+#summary_dir: 'E:\InsightFaceFeiWang\insightface\recognition\summary'
+
+train_dir: '/content/arcface_fork/recognition/data/VN-celeb/train'
+valid_dir: '/content/arcface_fork/recognition/data/VN-celeb/val'
+test_dir:
+ckpt_dir: '/content/arcface_fork/recognition'
+summary_dir: '/content/arcface_fork/recognition/summary'

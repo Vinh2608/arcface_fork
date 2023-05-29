@@ -1,6 +1,8 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 
 import tensorflow as tf
+import sys
+sys.path.append('/content/arcface_fork/recognition')
 
 
 class BasicBlock(tf.keras.layers.Layer):
@@ -151,7 +153,7 @@ def main():
     train_data, classes = gd.get_train_data()
 
     model = ResNet_v1_50(embedding_size=config['embedding_size'])
-    model.build((None, 112, 112, 3))
+    model.build((None, 128, 128, 3))
     model.summary()
     # model = tf.keras.applications.ResNet50(input_shape=(112, 112, 3), include_top=False)
     # model = tf.keras.applications.ResNet50(include_top=True, weights='imagenet')
