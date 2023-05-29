@@ -60,7 +60,10 @@ def main():
 
     # model = ResNet_v1_50(embedding_size=config['embedding_size'])
     model = MyModel(ResNet_v1_50, embedding_size=config['embedding_size'], classes=classes)
-    model.build((None, 112, 112, 3))
+    model.build((None, 128, 128, 3))
+    model.layers[-1].trainabble = True
+    for layer in model.layers[0:-1]:
+        layer.trainable = False
     model.summary()
     # for img, _ in train_data.take(1):
     #     y = model(img, training=False)
